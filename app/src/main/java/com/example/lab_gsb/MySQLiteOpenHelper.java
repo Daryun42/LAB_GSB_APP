@@ -5,11 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
-    private String creation="create table users("
+    private String creation="create table visites("
             + "id INTEGER PRIMARY KEY,"
-            + "nom TEXT NOT NULL,"
-            + "prenom TEXT NOT NULL,"
-            + "email TEXT NOT NULL);";
+            + "dateVisite TEXT NOT NULL,"
+            + "nomVisiteur TEXT NOT NULL,"
+            + "nomPraticien TEXT NOT NULL);";
 
 
     public MySQLiteOpenHelper(@androidx.annotation.Nullable Context context, @androidx.annotation.Nullable String name, @androidx.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version) {
