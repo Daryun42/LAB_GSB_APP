@@ -1,6 +1,7 @@
 package com.example.lab_gsb;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class AccesLocal {
@@ -18,5 +19,18 @@ public class AccesLocal {
         String req = "insert into visites (id,dateVisite,nomVisiteur,nomPraticien) values";
         req += "("+1+",\""+user.getDateVisite()+"\","+user.getNomVisiteur()+","+user.getNomPraticien()+")";
         bd.execSQL(req);
+    }
+
+    public Visite recupDernier(){
+        bd = accessBD.getReadableDatabase();
+        Visite visite = null;
+        String req = "select * FROM visites";
+        Cursor curseur = bd.rawQuery(req,null);
+        curseur.moveToLast();
+        if(!curseur.isAfterLast()){
+            INTEGER id = 1;
+            Date dateVisite = newDate();
+            TEXT nom = curseur.getText()
+        }
     }
 }
