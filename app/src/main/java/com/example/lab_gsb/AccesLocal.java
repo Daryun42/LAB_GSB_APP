@@ -30,7 +30,7 @@ public class AccesLocal {
         if(!curseur.isAfterLast()){
             INTEGER id = 1;
             Date dateVisite = newDate();
-            TEXT nom = curseur.getText()
+            TEXT nom = curseur.getText();
         }
     }
 }
